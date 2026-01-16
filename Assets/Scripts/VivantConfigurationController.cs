@@ -11,9 +11,19 @@ public class VivantConfigurationController : ScriptableObject
     public List<Material> materiauxRandom = new();
 
     [Header("Mouvements")]
-    public float rayonMouvement;
+    public Vector2 rayonMouvement;
 
     public Vector2 tempsAttente;
+
+    public float distanceArret = 0.3f;
+
+    [Header("Vitesses")]
+    public float acceleration;
+    public float vitesseMax;
+    [Header("Saut")]
+    public Vector2 tempsEntreSauts = new Vector2(2f, 5f);
+    public Vector2 puissanceSaut = new Vector2(15f, 25f); // PLUS GRAND qu’Impulse
+    public float distanceSol = 0.3f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
